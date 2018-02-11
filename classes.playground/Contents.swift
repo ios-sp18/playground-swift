@@ -5,7 +5,7 @@ import UIKit
 
 //Syntax
 class SomeClass {
-    // class definition goes here  TEST
+    // class definition goes here  
 }
 struct SomeStructure {
     // structure definition goes here
