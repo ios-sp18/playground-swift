@@ -19,7 +19,7 @@ rangeOfThreeItems.firstValue = 6
 
 let rangeOfFourItems = FixedLengthRange(firstValue: 0, length: 4)
 // this range represents integer values 0, 1, 2, and 3
-//UC rangeOfFourItems.firstValue = 6
+// rangeOfFourItems.firstValue = 6
 // this will report an error, even though firstValue is a variable property
 
 //:## Lazy Stored Properties
@@ -38,12 +38,12 @@ class DataImporter {
 }
 
 class DataManager {
-    lazy var importer = DataImporter()
+     lazy var importer = DataImporter()
     var data = [String]()
     // the DataManager class would provide data management functionality here
 }
 
-let manager = DataManager()
+let manager = DataManager() //view the 'manager' on the right, remove 'lazy' then view the 'manager' again.
 manager.data.append("Some data")
 manager.data.append("Some more data")
 // the DataImporter instance for the importer property has not yet been created
@@ -118,7 +118,7 @@ struct AlternativeRect {
 struct Cuboid {
     var width = 0.0, height = 0.0, depth = 0.0
     var volume: Double {
-        return width * height * depth  // NO get OR set
+        return width * height * depth // NO get OR set
     }
 }
 let fourByFiveByTwo = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
@@ -140,11 +140,12 @@ class StepCounter {
             print("About to set totalSteps to \(newTotalSteps)")
         }
         didSet {
-            if totalSteps > oldValue  {
+            //if totalSteps > oldValue  {
                 print("Added \(totalSteps - oldValue) steps")
-            }
+            //}
         }
     }
+
 }
 let stepCounter = StepCounter()
 stepCounter.totalSteps = 200
@@ -156,6 +157,7 @@ stepCounter.totalSteps = 360
 stepCounter.totalSteps = 896
 // About to set totalSteps to 896
 // Added 536 steps
+stepCounter.totalSteps = 896
 
 
 //:* You can add property observers to any stored properties you define, except for lazy stored properties. 

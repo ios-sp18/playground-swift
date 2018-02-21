@@ -27,6 +27,7 @@ var directionToHead = CompassPoint.west
 directionToHead = .east
 
 
+
 //: Matching Enumeration Values with a Switch Statement
 
 directionToHead = .south

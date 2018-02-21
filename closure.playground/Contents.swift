@@ -41,7 +41,7 @@ reversedNames = names.sorted(by: { $0 > $1 } )
 //Here, $0 and $1 refer to the closure’s first and second String arguments.
 
 //Since String has it's own implementation of >, we can:
-reversedNames = names.sorted(by: >)
+reversedNames = names.sorted(by: <)
 
 
 //: ### C'MON

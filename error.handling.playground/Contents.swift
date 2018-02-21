@@ -146,10 +146,10 @@ func processFile(filename: String) throws {
         //more cod that may return
         //which means you will return before closing the file
         //How to ensure that some will always execute when I leave the this 'scope'?
-        defer {
-            close(file)
-        }
-        while let line = try file.readline() {
+//        defer {
+//            close(file)
+//        }
+//        while let line = try file.readline() {
             // Work with the file.
         }
         // close(file) is called here, at the end of the scope.

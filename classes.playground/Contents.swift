@@ -25,10 +25,15 @@ class VideoMode {
     var frameRate = 0.0
     var name: String?
 }
+let v = VideoMode()
+//UC
+//struct CanBeAvidwoMode: VideoMode{
+//    var i: Int
+//}
 
 //: Question: How come all are initialized except for 'name'?
 
-//Create instances
+//Creat instances
 //Since in swift you create instances from both classes & structs, it preferes instance over object.
 let someResolution = Resolution()
 let someVideoMode = VideoMode()
@@ -48,18 +53,19 @@ print("The width of someVideoMode is now \(someVideoMode.resolution.width)")
 // Prints "The width of someVideoMode is now 1280"
 
 
-//:Memberwise Initializers for Structure Types
+//:Memberwise Initializers for Structure Types. The memberwise initializer is a shorthand way to initialize the member properties of new structure instances
 
 //All structures have an automatically-generated memberwise initializer, 
 //which you can use to initialize the member properties of new structure instances. 
 //Initial values for the properties of the new instance can be passed to the memberwise initializer by name:
 
+let emptyVga = Resolution() //0, 0
 let vga = Resolution(width: 640, height: 480)
 //UC let vga2 = Resolution(width: 640)
-//
-//Unlike structures, class instances do not receive a default memberwise initializer.
+//The line above won't work, you need to provide both values OR no values at all.
+//: Unlike structures, class instances do not receive a default memberwise initializer.
 
-//:Structures and Enumerations Are Value Types
+//:# Structures and Enumerations Are Value Types
 //:* A value type is a type whose value is copied when it is assigned to a variable or constant, or when it is passed to a function.
 //:* all of the basic types in Swift— integers, floating-point numbers, Booleans, strings, arrays and dictionaries—are value types, and are implemented as structures behind the scenes.
 //:* All structures and enumerations are value types in Swift. This means that any structure and enumeration instances you create—and any value types they have as properties—are always copied when they are passed around in your code.
@@ -86,7 +92,7 @@ if rememberedDirection == .west {
 }
 // Prints "The remembered direction is still .west"
 
-//:## Classes Are Reference Types
+//:# Classes Are Reference Types
 
 //Unlike value types, reference types are not copied when they are assigned to a variable or constant, or when they are passed to a function. 
 //:*Rather than a copy, a reference to the same existing instance is used instead.*

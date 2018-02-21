@@ -39,8 +39,18 @@ print("The point is now at (\(somePoint.x), \(somePoint.y))")
 //: Instance methods, as described above, are methods that are called on an instance of a particular type. 
 //: You can also define methods that are called on the type itself. These kinds of methods are called type methods. You indicate type methods by writing the __static__ keyword before the method’s func keyword. Classes may also use the __class__ keyword to allow subclasses to override the superclass’s implementation of that method.
 class SomeClass {
-    class func someTypeMethod() {
+    static func someTypeMethod() {
         // type method implementation goes here
     }
+    class func youCanOverrideMe() {
+        // type method implementation goes here
+    }
+    func aFun (){
+        
+    }
 }
+let s = SomeClass()
+s.aFun()
+//UC SomeClass.aFun()
 SomeClass.someTypeMethod() //NOTE 'SomeClass'
+SomeClass.youCanOverrideMe()

@@ -99,6 +99,7 @@ func someFunction(argumentLabel parameterName: Int) {
     //: let x = argumentLabel
     let x = parameterName
 }
+someFunction(argumentLabel: 5)
 //Here’s a variation of the greet(person:) function that takes a person’s name and hometown and returns a greeting:
 
 func greet(person: String, from hometown: String) -> String {
@@ -141,7 +142,7 @@ func arithmeticMean(_ numbers: Double...) -> Double {
     }
     return total / Double(numbers.count)
 }
-arithmeticMean(1, 2, 3, 4, 5)
+arithmeticMean(1, 2, 3, 4, 5, 8, 9)
 // returns 3.0, which is the arithmetic mean of these five numbers
 arithmeticMean(3, 8.25, 18.75)
 // returns 10.0, which is the arithmetic mean of these three numbers

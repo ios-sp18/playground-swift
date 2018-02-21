@@ -10,10 +10,16 @@ struct TimesTable {
     subscript(index: Int) -> Int {
         return multiplier * index
     }
+    
+    func withoutSubscript(index: Int) -> Int {
+        return multiplier * index
+    }
 }
 let threeTimesTable = TimesTable(multiplier: 3)
 print("six times three is \(threeTimesTable[6])")
 // Prints "six times three is 18"
+//OR
+print("six times three is \(threeTimesTable.withoutSubscript(index: 6))")
 
 //: WHO's a memory gure
 struct Matrix {
